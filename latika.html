@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nama Startup AI Kamu</title>
+    <style>
+        /* CSS Styling di sini */
+        body { font-family: 'Poppins', sans-serif; margin: 0; background: #f4f6f9; color: #333; }
+        header { background: #4f46e5; color: white; padding: 2rem; text-align: center; }
+        .container { max-width: 800px; margin: 2rem auto; background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+        button { background: #4f46e5; color: white; border: none; padding: 10px 20px; border-radius: 6px; cursor: pointer; }
+        button:hover { background: #4338ca; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Solusi Pintar Berbasis AI untuk Masalahmu</h1>
+        <p>Tingkatkan produktivitas dengan teknologi cerdas kami.</p>
+    </header>
+
+    <div class="container">
+        <h2>Coba Demo AI Kami</h2>
+        <textarea id="userInput" rows="4" style="width: 100%; padding: 10px; margin-bottom: 10px;" placeholder="Ketik sesuatu di sini..."></textarea>
+        <br>
+        <button onclick="runAI()">Proses dengan AI</button>
+        <div id="aiResult" style="margin-top: 20px; font-weight: bold; color: #4f46e5;"></div>
+    </div>
+
+    <script>
+        // JavaScript Interaktif di sini
+        function runAI() {
+            const input = document.getElementById('userInput').value;
+            const resultBox = document.getElementById('aiResult');
+            
+            if(input.trim() === "") {
+                resultBox.innerHTML = "⚠️ Silakan masukkan teks terlebih dahulu!";
+                return;
+            }
+            
+            resultBox.innerHTML = "⏳ Sedang memproses AI...";
+            setTimeout(() => {
+                resultBox.innerHTML = "✨ Hasil AI: Berdasarkan analisis, ide '" + input + "' memiliki potensi pasar yang hebat dan solusi yang inovatif!";
+            }, 1000);
+        }
+    </script>
+
+</body>
+</html>
